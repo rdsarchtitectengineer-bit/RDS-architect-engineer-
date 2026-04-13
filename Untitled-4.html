@@ -1,0 +1,597 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RDS ARCHITECT ENGINEER</title>
+<meta name="description" content="RDS Architect Engineer - House Planning, 3D Elevation, Interior Design in Punjab">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;background:#f5f5f5;scroll-behavior:smooth;color:#333;}
+a{cursor:pointer;}
+header{background:#000;color:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;}
+nav a{color:#fff;margin:0 10px;text-decoration:none;transition:0.3s;} 
+nav a.active{color:orange;}
+nav a:hover{color:orange;}
+.logo{display:flex;align-items:center;}
+.logo img{height:50px;margin-right:10px;}
+
+/* HERO SLIDER */
+.hero{height:100vh;background:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover;display:flex;justify-content:center;align-items:center;color:#fff;text-align:center;position:relative;overflow:hidden;transition:1s;}
+.hero::after{content:'';position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.6);pointer-events:none;}
+.hero-content{position:relative;z-index:2;animation:fadeSlide 1.5s ease-out;}
+@keyframes fadeSlide{0%{opacity:0;transform:translateY(40px);}100%{opacity:1;transform:translateY(0);}}
+.btn{background:orange;padding:12px 30px;color:#fff;border-radius:50px;text-decoration:none;transition:0.4s;display:inline-block;}
+.btn:hover{transform:scale(1.15);box-shadow:0 0 20px orange;}
+
+/* SECTION */
+.section{padding:80px 20px;text-align:center;position:relative;}
+h2{font-size:36px;background:linear-gradient(90deg,#ff8c00,#ffd700);-webkit-background-clip:text;color:transparent;margin-bottom:40px;}
+
+/* SERVICES */
+.services{display:flex;flex-wrap:wrap;gap:25px;justify-content:center;}
+.card{background:#fff;padding:25px;border-radius:20px;width:260px;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,0.2);transition:0.5s;transform-style: preserve-3d;}
+.card:hover{transform:rotateY(10deg) rotateX(5deg) scale(1.05);box-shadow:0 15px 30px rgba(0,0,0,0.3);}
+.card h3{margin-bottom:10px;}
+.card p{color:#555;}
+.hide{display:none;}
+
+/* DESIGN GRID */
+.design-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;padding:20px;}
+.design-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 10px 25px rgba(0,0,0,0.2);transition:0.4s;}
+.design-card:hover{transform:scale(1.08);}
+.design-card img{width:100%;height:220px;object-fit:cover;transition:0.5s;}
+.design-card img:hover{transform:scale(1.1);}
+
+/* ABOUT */
+#about{background:#111;color:#fff;}
+#about p{max-width:850px;margin:25px auto;line-height:1.9;font-size:17px;opacity:0;transform:translateY(40px);transition:all 1s ease-out;}
+#about p.show{opacity:1;transform:translateY(0);}
+
+/* CONTACT */
+.contact-box{max-width:650px;margin:auto;background:#fff;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.2);}
+input,textarea,select,button{width:100%;padding:12px;margin:12px 0;border-radius:8px;border:1px solid #ccc;}
+button{background:orange;color:#fff;border:none;cursor:pointer;transition:0.4s;}
+button:hover{background:#ffb347;}
+
+/* FLOAT BUTTONS */
+.whatsapp,.call{position:fixed;right:20px;width:60px;height:60px;display:flex;align-items:center;justify-content:center;color:#fff;border-radius:50%;font-size:28px;transition:0.3s;z-index:999;}
+.whatsapp{bottom:20px;background:#25D366;}
+.call{bottom:100px;background:red;}
+.whatsapp:hover,.call:hover{transform:scale(1.2);}
+
+footer{background:#000;color:#fff;text-align:center;padding:25px;}
+
+/* FILTER PORTFOLIO BUTTONS */
+.filter-btns{margin-bottom:40px;}
+.filter-btns button{padding:10px 20px;margin:0 10px;border:none;border-radius:50px;background:#333;color:#fff;cursor:pointer;transition:0.3s;}
+.filter-btns button.active, .filter-btns button:hover{background:orange;}
+</style>
+</head>
+<body>
+
+<div style="background:orange;color:#fcf8f8;text-align:center;padding:8px;"><h3>📞 7986102830 | 📧 rds.architect.engineer@gmail.com</h3></div>
+
+<header>
+<div class="logo"><img src="logo.png" alt="Logo"><h2>RDS ARCHITECT ENGINEER</h2></div>
+<nav>
+<a href="#" class="active">Home</a>
+<a href="#services">Services</a>
+<a href="#interior">Interior</a>
+<a href="#exterior">Exterior</a>
+<a href="#about">About</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+
+<!-- HERO -->
+<div class="hero" id="hero">
+<div class="hero-content">
+<h1 class="animate__animated animate__fadeInDown">Design Your Dream Space</h1>
+<p class="animate__animated animate__fadeInUp">Interior | Architecture | 3D Elevation</p>
+<p style="color:yellow;" class="animate__animated animate__pulse animate__infinite">🔥 Free Consultation Available</p>
+<a href="#contact" class="btn animate__animated animate__fadeInUp">Book Now</a>
+</div>
+</div>
+
+<!-- ABOUT --><!-- ABOUT IMAGE WITH BIO -->
+<div class="about-hero">
+  <img src="https://i.postimg.cc/zbq4mL9h/Whats-App-Image-2026-04-02-at-11-19-58-PM.jpg" alt="Raaz Pandit" class="about-img">
+  <div class="bio-overlay">
+    <h2>Hi, I'm Raaz Pandit</h2>
+    <p>Passionate Architect & Designer. I turn ideas into beautiful, functional spaces. Welcome to my world of creativity and innovation!</p>
+  </div>
+</div>
+
+<style>
+.about-hero{
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.about-hero .about-img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: brightness(0.9);
+  display: block;
+  transition: transform 0.5s;
+}
+.about-hero .about-img:hover{
+  transform: scale(1.05);
+}
+.bio-overlay{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: left;
+}
+.bio-overlay h2{
+  margin-top: 0;
+  font-size: 2rem;
+  color: #ffb347;
+}
+@media(max-width:768px){
+  .bio-overlay{
+    font-size: 1rem;
+    padding: 15px;
+  }
+  .bio-overlay h2{
+    font-size: 1.5rem;
+  }
+}
+</style>
+<div id="about" class="section">
+<h2>About Us</h2>
+<p>RDS Architect Engineer is a premium architecture and design studio founded and led by its visionary Founder & CEO, Mr. Raj. With advanced-level expertise and a strong foundation in modern architectural practices, he has established a reputation for delivering sophisticated, high-quality design solutions since 2020.</p>
+<p>Mr. Raj is known for his refined approach to architecture, where creativity meets precision and functionality blends seamlessly with aesthetics. His expertise spans across 2D planning, 3D elevation, and luxury interior design, creating spaces that reflect elegance, innovation, and timeless appeal.</p>
+<p>Every project undertaken by RDS Architect Engineer is a reflection of excellence, where attention to detail, modern design trends, and vastu principles are carefully integrated to deliver outstanding results. His work is not just about constructing spaces but about crafting experiences that define lifestyle and comfort.</p>
+<p>Under his leadership, the firm has successfully delivered a diverse range of residential and commercial projects, earning trust through professionalism, quality, and client satisfaction. His vision is to transform ordinary spaces into extraordinary landmarks that stand out with uniqueness and class.</p>
+<p>RDS Architect Engineer is more than a design firm — it is a symbol of luxury, innovation, and architectural excellence, driven by passion and committed to creating spaces that inspire and impress.</p>
+</div>
+
+<!-- INTERIOR -->
+<!-- INTERIOR DESIGN SECTION -->
+<div id="interior" class="section">
+  <h2>Interior Design Gallery</h2>
+  <p>Explore our premium interior designs. Click on any image to view in full resolution.</p>
+
+  <!-- Thumbnails Floating -->
+  <div class="interior-thumbnails">
+    <img src="https://i.postimg.cc/NyBbDw69/Whats-App-Image-2026-04-02-at-11-08-33-PM-(1)-Copy-Copy.jpg" onclick="openLightbox(this)" alt="Interior 1">
+    <img src="https://i.postimg.cc/SnWDcKMW/Whats-App-Image-2026-04-02-at-11-08-33-PM-Copy-Copy.jpg" onclick="openLightbox(this)" alt="Interior 2">
+    <img src="https://i.postimg.cc/67tzcNrZ/Whats-App-Image-2026-04-02-at-11-08-34-PM-(1)-Copy-Copy.jpg" onclick="openLightbox(this)" alt="Interior 3">
+    <img src="https://i.postimg.cc/zL8p71Cg/Whats-App-Image-2026-04-02-at-11-08-34-PM-Copy-Copy.jpg" onclick="openLightbox(this)" alt="Interior 4">
+    <img src="https://i.postimg.cc/jWtvcrHn/Whats-App-Image-2026-04-02-at-11-08-37-PM-Copy-Copy.jpg" onclick="openLightbox(this)" alt="Interior 5">
+    <img src="https://i.postimg.cc/5HbpgMBS/Whats-App-Image-2026-04-02-at-11-09-24-PM-(1)-Copy-Copy.jpg" onclick="openLightbox(this)" alt="Interior 6">
+    <img src="https://i.postimg.cc/7CwX9y3K/Whats-App-Image-2026-04-02-at-11-09-24-PM-(2)-Copy.jpg" onclick="openLightbox(this)" alt="Interior 7">
+    <img src="https://i.postimg.cc/yJsnjzmm/Whats-App-Image-2026-04-02-at-11-09-24-PM-Copy-Copy.jpg" onclick="openLightbox(this)" alt="Interior 8">
+    <img src="https://i.postimg.cc/QBhSmrQ4/Whats-App-Image-2026-04-02-at-11-09-25-PM-Copy-Copy.jpg" onclick="openLightbox(this)" alt="Interior 9">
+    <img src="https://i.postimg.cc/sBsKmRYt/Whats-App-Image-2026-04-02-at-11-12-13-PM-(1)-Copy-Copy.jpg" onclick="openLightbox(this)" alt="Interior 10">
+    <img src="https://i.postimg.cc/bGggFFgC/Whats-App-Image-2026-04-02-at-11-12-13-PM-(2)-Copy-Copy.jpg" onclick="openLightbox(this)" alt="Interior 11">
+    <img src="https://i.postimg.cc/5HbpgMBK/Whats-App-Image-2026-04-02-at-11-12-13-PM-Copy-Copy.jpg" onclick="openLightbox(this)" alt="Interior 12">
+    <img src="https://i.postimg.cc/LqDD00DQ/Whats-App-Image-2026-04-02-at-11-12-14-PM-(1)-Copy.jpg" onclick="openLightbox(this)" alt="Interior 13">
+    <img src="https://i.postimg.cc/t1kkmmkm/Whats-App-Image-2026-04-02-at-11-12-14-PM-(2)-Copy.jpg" onclick="openLightbox(this)" alt="Interior 14">
+    <img src="https://i.postimg.cc/67cc11cF/Whats-App-Image-2026-04-02-at-11-12-15-PM-Copy.jpg" onclick="openLightbox(this)" alt="Interior 15">
+    <img src="https://i.postimg.cc/cKhh55Tq/Whats-App-Image-2026-04-02-at-11-12-16-PM-(1)-Copy.jpg" onclick="openLightbox(this)" alt="Interior 16">
+    <img src="https://i.postimg.cc/Mc55rr5C/Whats-App-Image-2026-04-02-at-11-12-16-PM-Copy.jpg" onclick="openLightbox(this)" alt="Interior 17">
+    <img src="https://i.postimg.cc/HJzzPP31/Whats-App-Image-2026-04-02-at-11-13-28-PM-(1)-Copy.jpg" onclick="openLightbox(this)" alt="Interior 18">
+  </div>
+</div>
+
+<!-- LIGHTBOX FOR INTERIOR IMAGES -->
+<div id="lightbox" onclick="closeLightbox()">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-img" id="lightbox-img" src="">
+</div>
+
+<!-- CSS FOR INTERIOR SECTION -->
+<style>
+.interior-thumbnails{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  justify-content:flex-start;
+  margin-top:25px;
+  transition:all 0.3s ease;
+}
+.interior-thumbnails img{
+  width:180px;
+  height:120px;
+  object-fit:cover;
+  border-radius:15px;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+  transition:transform 0.3s, box-shadow 0.3s;
+}
+.interior-thumbnails img:hover{
+  transform:scale(1.05);
+  box-shadow:0 12px 30px rgba(0,0,0,0.5);
+}
+
+/* LIGHTBOX STYLING */
+#lightbox{
+  display:none;
+  position:fixed;
+  top:0;left:0;width:100%;height:100%;
+  background:rgba(0,0,0,0.95);
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+#lightbox img{
+  max-width:95%;
+  max-height:95%;
+  border-radius:15px;
+  box-shadow:0 15px 50px rgba(0,0,0,0.7);
+  animation:zoomIn 0.4s ease-out;
+}
+#lightbox .close{
+  position:absolute;
+  top:20px;
+  right:40px;
+  font-size:50px;
+  color:#fff;
+  cursor:pointer;
+}
+@keyframes zoomIn{
+  0%{transform:scale(0.5);opacity:0;}
+  100%{transform:scale(1);opacity:1;}
+}
+</style>
+
+<!-- JS FOR LIGHTBOX -->
+<script>
+function openLightbox(el){
+  document.getElementById('lightbox').style.display='flex';
+  document.getElementById('lightbox-img').src=el.src;
+}
+function closeLightbox(){
+  document.getElementById('lightbox').style.display='none';
+}
+</script>
+
+<!-- EXTERIOR -->
+ <!-- EXTERIOR DESIGN SECTION WITH FULL HD LIGHTBOX -->
+<div id="exterior" class="section">
+  <h2>Exterior Design Gallery</h2>
+  <p>"Stunning 3D Elevations – Classical & Modern Masterpieces".</p>
+
+  <div class="exterior-thumbnails">
+    <img src="https://i.postimg.cc/XZHgspcz/Whats-App-Image-2026-04-02-at-11-08-37-PM-(1)-Copy.jpg" data-full="https://i.postimg.cc/XZHgspcz/Whats-App-Image-2026-04-02-at-11-08-37-PM-(1)-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 1">
+    <img src="https://i.postimg.cc/CBRsXSmv/Whats-App-Image-2026-04-02-at-11-08-38-PM-(1)-Copy.jpg" data-full="https://i.postimg.cc/CBRsXSmv/Whats-App-Image-2026-04-02-at-11-08-38-PM-(1)-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 2">
+    <img src="https://i.postimg.cc/tZsNwp2M/Whats-App-Image-2026-04-02-at-11-08-38-PM-(2)-Copy.jpg" data-full="https://i.postimg.cc/tZsNwp2M/Whats-App-Image-2026-04-02-at-11-08-38-PM-(2)-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 3">
+    <img src="https://i.postimg.cc/bDZ9Wp3m/Whats-App-Image-2026-04-02-at-11-08-38-PM-Copy.jpg" data-full="https://i.postimg.cc/bDZ9Wp3m/Whats-App-Image-2026-04-02-at-11-08-38-PM-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 4">
+
+    <img src="https://i.postimg.cc/xJX3hn6D/Whats-App-Image-2026-04-02-at-11-08-39-PM-(1)-Copy.jpg" data-full="https://i.postimg.cc/xJX3hn6D/Whats-App-Image-2026-04-02-at-11-08-39-PM-(1)-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 5">
+    <img src="https://i.postimg.cc/MMnmNqdr/Whats-App-Image-2026-04-02-at-11-08-39-PM-Copy.jpg" data-full="https://i.postimg.cc/MMnmNqdr/Whats-App-Image-2026-04-02-at-11-08-39-PM-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 6">
+    <img src="https://i.postimg.cc/jwD4mtMr/Whats-App-Image-2026-04-02-at-11-08-40-PM-(1)-Copy.jpg" data-full="https://i.postimg.cc/jwD4mtMr/Whats-App-Image-2026-04-02-at-11-08-40-PM-(1)-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 7">
+    <img src="https://i.postimg.cc/zbyF68xq/Whats-App-Image-2026-04-02-at-11-08-40-PM-(2)-Copy.jpg" data-full="https://i.postimg.cc/zbyF68xq/Whats-App-Image-2026-04-02-at-11-08-40-PM-(2)-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 8">
+
+    <img src="https://i.postimg.cc/5YXSTbsW/Whats-App-Image-2026-04-02-at-11-08-40-PM-Copy.jpg" data-full="https://i.postimg.cc/5YXSTbsW/Whats-App-Image-2026-04-02-at-11-08-40-PM-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 9">
+    <img src="https://i.postimg.cc/XGrkm4sN/Whats-App-Image-2026-04-02-at-11-08-41-PM-(1)-Copy.jpg" data-full="https://i.postimg.cc/XGrkm4sN/Whats-App-Image-2026-04-02-at-11-08-41-PM-(1)-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 10">
+    <img src="https://i.postimg.cc/TLKJFftY/Whats-App-Image-2026-04-02-at-11-08-41-PM-Copy.jpg" data-full="https://i.postimg.cc/TLKJFftY/Whats-App-Image-2026-04-02-at-11-08-41-PM-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 11">
+    <img src="https://i.postimg.cc/FdYV8NTr/Whats-App-Image-2026-04-02-at-11-09-25-PM-(1)-Copy.jpg" data-full="https://i.postimg.cc/FdYV8NTr/Whats-App-Image-2026-04-02-at-11-09-25-PM-(1)-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 12">
+
+    <img src="https://i.postimg.cc/N9KkSBdj/Whats-App-Image-2026-04-02-at-11-15-51-PM-Copy.jpg" data-full="https://i.postimg.cc/N9KkSBdj/Whats-App-Image-2026-04-02-at-11-15-51-PM-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 13">
+    <img src="https://i.postimg.cc/wy1QZgwM/Whats-App-Image-2026-04-02-at-11-19-58-PM-(1)-Copy.jpg" data-full="https://i.postimg.cc/wy1QZgwM/Whats-App-Image-2026-04-02-at-11-19-58-PM-(1)-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 14">
+    <img src="https://i.postimg.cc/xJB3ShZ2/Whats-App-Image-2026-04-02-at-11-19-59-PM-(1)-Copy.jpg" data-full="https://i.postimg.cc/xJB3ShZ2/Whats-App-Image-2026-04-02-at-11-19-59-PM-(1)-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 15">
+    <img src="https://i.postimg.cc/WFxwPCyV/Whats-App-Image-2026-04-02-at-11-19-59-PM-Copy.jpg" data-full="https://i.postimg.cc/WFxwPCyV/Whats-App-Image-2026-04-02-at-11-19-59-PM-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 16">
+
+    <img src="https://i.postimg.cc/sQb4RqLy/Whats-App-Image-2026-04-02-at-11-20-03-PM-Copy.jpg" data-full="https://i.postimg.cc/sQb4RqLy/Whats-App-Image-2026-04-02-at-11-20-03-PM-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 17">
+    <img src="https://i.postimg.cc/FdwVQ86R/Whats-App-Image-2026-04-05-at-7-53-34-PM-(1)-Copy.jpg" data-full="https://i.postimg.cc/FdwVQ86R/Whats-App-Image-2026-04-05-at-7-53-34-PM-(1)-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 18">
+    <img src="https://i.postimg.cc/WFxwPCyt/Whats-App-Image-2026-04-05-at-7-53-34-PM-(2)-Copy.jpg" data-full="https://i.postimg.cc/WFxwPCyt/Whats-App-Image-2026-04-05-at-7-53-34-PM-(2)-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 19">
+    <img src="https://i.postimg.cc/jwB4rm1L/Whats-App-Image-2026-04-05-at-7-53-34-PM-(3)-Copy.jpg" data-full="https://i.postimg.cc/jwB4rm1L/Whats-App-Image-2026-04-05-at-7-53-34-PM-(3)-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 20">
+
+    <img src="https://i.postimg.cc/S2Hfp3PK/Whats-App-Image-2026-04-05-at-7-53-34-PM-Copy.jpg" data-full="https://i.postimg.cc/S2Hfp3PK/Whats-App-Image-2026-04-05-at-7-53-34-PM-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 21">
+    <img src="https://i.postimg.cc/bD49jW5D/Whats-App-Image-2026-04-05-at-7-53-35-PM-Copy.jpg" data-full="https://i.postimg.cc/bD49jW5D/Whats-App-Image-2026-04-05-at-7-53-35-PM-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 22">
+    <img src="https://i.postimg.cc/r07NL3Hx/Whats-App-Image-2026-04-05-at-7-53-37-PM-Copy.jpg" data-full="https://i.postimg.cc/r07NL3Hx/Whats-App-Image-2026-04-05-at-7-53-37-PM-Copy.jpg" onclick="openLightbox(this)" alt="Exterior 23">
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox2" onclick="closeLightbox2()">
+  <span class="close" onclick="closeLightbox2()">&times;</span>
+  <img id="lightbox-img2" src="">
+</div>
+<style>
+.exterior-thumbnails{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  justify-content:flex-start;
+  margin-top:25px;
+}
+.exterior-thumbnails img{
+  width:180px;
+  height:120px;
+  object-fit:cover;
+  border-radius:15px;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+  transition:transform 0.3s, box-shadow 0.3s;
+}
+.exterior-thumbnails img:hover{
+  transform:scale(1.05);
+  box-shadow:0 12px 30px rgba(0,0,0,0.5);
+}
+
+/* LIGHTBOX */
+#lightbox{
+  display:none;
+  position:fixed;
+  top:0;left:0;width:100%;height:100%;
+  background:rgba(0,0,0,0.95);
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+#lightbox img{
+  max-width:95%;
+  max-height:95%;
+  border-radius:15px;
+  box-shadow:0 15px 50px rgba(0,0,0,0.7);
+  animation:zoomIn 0.4s ease-out;
+}
+#lightbox .close{
+  position:absolute;
+  top:20px;
+  right:40px;
+  font-size:50px;
+  color:#fff;
+  cursor:pointer;
+}
+@keyframes zoomIn{
+  0%{transform:scale(0.5);opacity:0;}
+  100%{transform:scale(1);opacity:1;}
+}
+</style>
+
+<script>
+function openLightbox(el){
+  const fullSrc = el.getAttribute('data-full'); // high-res image
+  document.getElementById('lightbox-img').src = fullSrc;
+  document.getElementById('lightbox').style.display = 'flex';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').style.display = 'none';
+}
+</script>
+
+<!-- SERVICES -->
+<div id="services" class="section">
+<h2>Our Services</h2>
+<div class="services">
+
+<!-- Interior Design -->
+<div class="card" onclick="toggle(this)">
+<h2>Interior Design</h2>
+<div class="hide">
+<h3>Modern & classical interior solutions</h3>
+<section id="bedroom">
+<p>We design modern and comfortable bedroom interiors with smart layouts, stylish furniture, and premium finishes to enhance your lifestyle.</p>
+<div class="bedroom-box"><h3>Bed Design</h3><p>Modern and luxury bed styles with storage options.</p></div>
+<div class="bedroom-box"><h3>Wardrobe</h3><p>Sliding and modular wardrobe with smart storage.</p></div>
+<div class="bedroom-box"><h3>False Ceiling</h3><p>Stylish ceiling design with LED lighting.</p></div>
+<div class="bedroom-box"><h3>Wall Design</h3><p>Paneling, textures, and TV unit design.</p></div>
+<div class="bedroom-box"><h3>Lighting</h3><p>Ambient and decorative lighting setup.</p></div>
+</section>
+</div>
+</div>
+
+<!-- House Planning -->
+<div class="card" onclick="toggle(this)">
+<h2>House Planning</h2>
+<div class="hide">
+<h3>2D map & vastu</h3>
+<section id="plan">
+<p>We provide detailed 2D house plans with accurate dimensions, vastu compliance, and modern design concepts for residential and commercial projects.</p>
+<div class="plan-box"><h3>Floor Plan</h3><p>Complete layout for ground and upper floors.</p></div>
+<div class="plan-box"><h3>Room Layout</h3><p>Bedroom, kitchen, hall, toilet with proper spacing.</p></div>
+<div class="plan-box"><h3>Furniture Layout</h3><p>Bed, sofa, wardrobe placement planning.</p></div>
+<div class="plan-box"><h3>Staircase Design</h3><p>Modern and space-efficient stair planning.</p></div>
+<div class="plan-box"><h3>Vastu Planning</h3><p>Direction-based vastu compliant design.</p></div>
+</section>
+</div>
+</div>
+
+<!-- 3D Elevation -->
+<div class="card" onclick="toggle(this)">
+<h2>3D Elevation Design</h2>
+<div class="hide">
+<h3>Modern & classical elevation</h3>
+<section id="elevation">
+<p>We create realistic 3D elevation designs with modern and classical styles, giving you a clear view of your house before construction.</p>
+<div class="elevation-box"><h3>Modern Elevation</h3><p>Clean and stylish front design with latest trends.</p></div>
+<div class="elevation-box"><h3>Classical Elevation</h3><p>Luxury elevation with pillars and rich detailing.</p></div>
+<div class="elevation-box"><h3>Front Design</h3><p>Attractive house front with balcony and texture work.</p></div>
+<div class="elevation-box"><h3>3D Visualization</h3><p>High-quality realistic view before construction.</p></div>
+<div class="elevation-box"><h3>Day & Night View</h3><p>Both daylight and night lighting elevation preview.</p></div>
+<div class="elevation-box"><h3>Custom Design</h3><p>Designs customized as per your plot and requirements.</p></div>
+</section>
+</div>
+</div>
+
+<!-- Structural Design -->
+<div class="card" onclick="toggle(this)">
+<h2>Structural Design</h2>
+<div class="hide">
+<section id="structure">
+<p>We provide safe and strong structural designs with proper load calculation, ensuring durability and stability for your building.</p>
+<div class="structure-box"><h3>Column Layout</h3><p>Accurate column placement for strong support.</p></div>
+<div class="structure-box"><h3>Beam Design</h3><p>Proper beam structure for load distribution.</p></div>
+<div class="structure-box"><h3>Foundation Plan</h3><p>Strong base design based on soil condition.</p></div>
+<div class="structure-box"><h3>Slab Design</h3><p>Safe and durable slab planning.</p></div>
+<div class="structure-box"><h3>Load Calculation</h3><p>Accurate load analysis for safety.</p></div>
+<div class="structure-box"><h3>Reinforcement Details</h3><p>Steel detailing for maximum strength.</p></div>
+</section>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- PORTFOLIO -->
+<div id="portfolio" class="section">
+<h2>Portfolio</h2>
+<div class="filter-btns">
+<button class="active" onclick="filterPortfolio('all', event)">All</button>
+<button onclick="filterPortfolio('interior', event)">Interior</button>
+<button onclick="filterPortfolio('exterior', event)">Exterior</button>
+<button onclick="filterPortfolio('residential', event)">Residential</button>
+<button onclick="filterPortfolio('commercial', event)">Commercial</button>
+</div>
+<div class="design-grid" id="portfolioGrid">
+<div class="design-card interior"><img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511"><h3>Bedroom</h3></div>
+<div class="design-card exterior"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"><h3>Modern Elevation</h3></div>
+<div class="design-card residential"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace"><h3>Living Room</h3></div>
+<div class="design-card commercial"><img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c"><h3>Office Exterior</h3></div>
+</div>
+</div>
+<!-- CLIENT REVIEWS -->
+<div id="reviews" class="section">
+<h2>Client Reviews</h2>
+
+<div class="review-container">
+
+<div class="review-card">
+<p>⭐⭐⭐⭐⭐</p>
+<p>"Best architect in Punjab! Amazing design & fast service."</p>
+<h4>- Happy Client</h4>
+</div>
+
+<div class="review-card">
+<p>⭐⭐⭐⭐⭐</p>
+<p>"3D elevation bilkul real jaisa tha 🔥 Highly recommended."</p>
+<h4>- Satisfied Customer</h4>
+</div>
+
+<div class="review-card">
+<p>⭐⭐⭐⭐⭐</p>
+<p>"Interior design bahut hi luxury feel deta hai."</p>
+<h4>- Home Owner</h4>
+</div>
+
+</div>
+</div>
+
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+<h2>Contact Us</h2>
+
+<div class="contact-box">
+
+<form id="contactForm">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="text" id="location" placeholder="Your Location" required>
+
+<input type="tel" id="phone" placeholder="Phone Number" required>
+
+<textarea id="message" placeholder="Your Requirement / Message" rows="5" required></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+</div>
+
+<style>
+#contactForm input:focus, #contactForm textarea:focus{
+  border-color:orange;
+  box-shadow:0 0 8px rgba(255,165,0,0.5);
+}
+#contactForm button:hover{
+  transform:scale(1.05);
+  box-shadow:0 8px 20px rgba(255,165,0,0.4);
+}
+</style>
+<a href="https://wa.me/917986102830" class="whatsapp">💬</a>
+<a href="tel:7986102830" class="call">📞</a>
+<footer>© 2026 RDS ARCHITECT ENGINEER</footer>
+
+<script>
+/* HERO SLIDER */
+document.getElementById("contactForm").addEventListener("submit", function(e){
+e.preventDefault();
+
+let name = document.getElementById("name").value;
+let location = document.getElementById("location").value;
+let phone = document.getElementById("phone").value;
+let message = document.getElementById("message").value;
+
+let text = encodeURIComponent(
+`Name: ${name}
+Location: ${location}
+Phone: ${phone}
+Message: ${message}`
+);
+
+window.open(`https://wa.me/917986102830?text=${text}`, "_blank");
+
+alert("Message sent successfully ✅");
+
+this.reset();
+});
+let images=['https://images.unsplash.com/photo-1503387762-592deb58ef4e','https://images.unsplash.com/photo-1600585154340-be6161a56a0c','https://images.unsplash.com/photo-1616486338812-3dadae4b4ace'];
+let i=0;
+setInterval(()=>{document.getElementById('hero').style.backgroundImage=`url(${images[i]})`;i=(i+1)%images.length;},3000);
+
+/* TOGGLE CARDS */
+function toggle(el){let p=el.querySelector('.hide');p.style.display=p.style.display==='block'?'none':'block';}
+
+/* WHATSAPP FORM */
+function sendToWhatsApp(e){
+e.preventDefault();
+let name=document.getElementById('name').value;
+let phone=document.getElementById('phone').value;
+let msg=`Hello, my name is ${name}, phone: ${phone}`;
+window.open(`https://wa.me/917986102830?text=${encodeURIComponent(msg)}`);
+}
+
+/* SCROLL REVEAL ABOUT */
+function revealOnScroll(){
+const faders=document.querySelectorAll('#about p');
+faders.forEach(fader=>{const rect=fader.getBoundingClientRect();if(rect.top<window.innerHeight-50){fader.classList.add('show');}});
+}
+window.addEventListener('scroll',revealOnScroll);
+window.addEventListener('load',revealOnScroll);
+
+/* NAV ACTIVE LINK */
+const sections=document.querySelectorAll('section, #about, #services, #portfolio, #contact');
+const navLinks=document.querySelectorAll('nav a');
+window.addEventListener('scroll',()=>{
+let current='';
+sections.forEach(section=>{const sectionTop=section.offsetTop-100;if(pageYOffset>=sectionTop){current=section.getAttribute('id');}});
+navLinks.forEach(link=>{link.classList.remove('active');if(link.getAttribute('href')==='#'+current){link.classList.add('active');}});
+});
+
+/* FILTER PORTFOLIO */
+function filterPortfolio(category,event){
+const cards=document.querySelectorAll('#portfolioGrid .design-card');
+cards.forEach(card=>{card.style.display=category==='all'||card.classList.contains(category)?'block':'none';});
+document.querySelectorAll('.filter-btns button').forEach(btn=>btn.classList.remove('active'));
+event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
